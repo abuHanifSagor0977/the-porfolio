@@ -1598,7 +1598,6 @@ footer{
 .top-bar {
   margin: 0;
   height: 100vh;
-  font-family: 'Poppins', sans-serif;
 }
 
 .top-bar iframe {
@@ -1610,16 +1609,39 @@ footer{
   right: 0;
 }
 
-.log_boxs h2 {
-  font-size: 10rem;
-  margin-top: 3em;
+.top-bar  .log_boxs h2 {
+  font-size: 5rem;
+  margin-top: 2em;
   margin-bottom: .3em;
   font-weight: 800;
+  background: #000DFF;
+background: linear-gradient(to left, #000DFF 0%, #00FFFF 70%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: textcolor 5s linear infinite;
 }
 
-.log_boxs p {
+@media screen and (min-width: 500px) {
+  .top-bar  .log_boxs h2 {
+    font-size: 3.5rem;
+  }
+
+  
+}
+@media screen and (min-width:768px) {
+  .top-bar  .log_boxs h2 {
+    font-size: 4.5rem;
+  }
+}
+@media screen and (min-width:992px) {
+  .top-bar  .log_boxs h2 {
+    font-size: 5.5rem;
+  }
+  
+}
+.top-bar  .log_boxs p {
   font-size: 1.6rem;
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
 }
 
