@@ -1566,3 +1566,114 @@ footer{
   left: 0;
 
 }
+/*================ PRELOADER END================== */
+
+
+
+
+
+
+
+
+/*================ MAIN CSS END================== */
+
+
+
+
+
+
+/*================ FROM HERE OTHER PAGE CSS START================== */
+
+
+
+
+
+
+
+
+
+
+/*==========================ABOUT PAGE============================ */
+
+.top-bar {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.top-bar iframe {
+  width: 100%;
+  margin-right: auto;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+}
+
+.log_boxs h2 {
+  font-size: 10rem;
+  margin-top: 3em;
+  margin-bottom: .3em;
+  font-weight: 800;
+}
+
+.log_boxs p {
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.log_boxs h2,p {
+  text-align: center;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.log_boxs{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ animation: slide .48s ease-in-out forwards;
+ animation-delay: 3.5s;
+}
+
+@keyframes slide {
+  0% {
+      top: 0%;
+      
+
+  } 
+  50% {
+      top: 30%;
+  }
+
+  100% {
+      animation-delay: 5s;
+      top: 25%;
+}
+
+}.log_boxs{
+  position: absolute;
+  top: 0;
+  font-size: 150px;
+  z-index: 10;
+  margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
