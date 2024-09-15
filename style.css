@@ -1616,9 +1616,9 @@ footer{
   font-weight: 800;
   background: #000DFF;
 background: linear-gradient(to left, #000DFF 0%, #00FFFF 70%);
+background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
-animation: textcolor 5s linear infinite;
 }
 
 @media screen and (min-width: 500px) {
