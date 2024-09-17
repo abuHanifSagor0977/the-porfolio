@@ -1,0 +1,310 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-collapse: collapse;
+  text-decoration: none;
+  list-style: none;
+}
+body,
+html {
+  font-family: "Rubik", sans-serif;
+  scroll-behavior: smooth;
+  overflow: auto;
+}
+a{
+  text-decoration: none;
+}
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+}
+section {
+  width: 100%;
+  padding: 80px 0;
+}
+h1 {
+  font-family: "Rubik-ital", sans-serif;
+}
+h2 {
+  font-family: "Rubik-ital", sans-serif;
+}
+:root {
+  --mainText-color: #fff;
+  --mainBg-color: rgb(255, 255, 255);
+  --NaveBlue-bg: rgb(0, 1, 30);
+  --Purple-bg: rgb(27, 9, 39);
+  --LightPurple-bg: rgb(76, 31, 99);
+  --DeepPurple-color: rgb(51, 7, 74);
+  --black-color: rgb(0, 0, 0);
+  --p-color: rgba(255, 255, 255, 0.6);
+  --team-color: rgb(24, 8, 36);
+  --font-rubik: "Rubik", sans-serif;
+  --font-rubik-ital: "Rubik-ital", sans-serif;
+  --tittle-color: rgb(128, 110, 144);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Rubik, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*================ FROM HERE OTHER PAGE CSS START================== */
+
+
+
+
+
+
+
+
+
+
+/*==========================ABOUT PAGE============================ */
+
+.topbar {
+    width: 90%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 5;
+    background-attachment: fixed;
+    
+  }
+  .tbar{
+    width: 100%;
+    height: 100%;
+      background: url("../images/HeroBanner/rays.webp");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 0;
+      background-attachment: fixed;
+      opacity: 0.8;
+  }
+  .topbar iframe {
+    width: 100%;
+    margin-right: auto;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    object-fit: cover;
+  }
+  
+  .topbar  .log_boxs h2 {
+    font-size: 5rem;
+    margin-top: 2em;
+    margin-bottom: .3em;
+    font-weight: 800;
+    background: #000dff;
+  background: linear-gradient(to left, #0800ff 20%, #9d00ff 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+  
+  @media screen and (min-width: 500px) {
+    .topbar  .log_boxs h2 {
+      font-size: 3.5rem;
+    }
+  
+    
+  }
+  @media screen and (min-width:768px) {
+    .topbar  .log_boxs h2 {
+      font-size: 4.5rem;
+    }
+  }
+  @media screen and (min-width:992px) {
+    .topbar  .log_boxs h2 {
+      font-size: 5.5rem;
+    }
+    
+  }
+  .topbar  .log_boxs p {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(0, 0, 0);
+  }
+  
+  .log_boxs {
+    text-align: center;
+    
+  }
+   
+  .log_boxs{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   animation: down .48s ease-in-out forwards;
+   animation-delay: 3.5s;
+  }
+  
+  @keyframes down {
+    0% {
+        top: 0%;
+        
+  
+    } 
+    50% {
+        top: 30%;
+    }
+  
+    100% {
+        animation-delay: 5s;
+        top: 25%;
+  }
+  
+  }.log_boxs{
+    position: absolute;
+    top: 0;
+    font-size: 150px;
+    z-index: 10;
+    margin: auto;
+  }
+  
+  
+   
+  
+  
+  /*==========================ABOUT MAIN PAGE START============================ */
+  
+  .about_img{
+    max-width: 90%;
+    border: 1px solid #454fe4;
+    height: 50vh;
+    background: url("../images/HOLOLIVE.jpeg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+   border-radius: 10px;
+  }
+    .about_img::before{
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url("../images/others/25b397807a8e973faf9e96f886fa8d4d.jpg");
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      mix-blend-mode: screen;
+    }
+  
+  
+  
+  .about{
+    width: 100%;
+    height: 80vh;
+    background-image: url("../images/logo/0uRSMyBh_1x.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    pointer-events: none;
+   
+  }
+  .about::before{ 
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.474);
+  }
+  
+  .about_text {
+    transform: translateX(-60%);
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  }
+  
+  .animated {
+    animation: slide 1s ease-in-out forwards;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(-60%);
+      opacity: 0;
+    }
+    50% {
+      transform: translateX(10%);
+      opacity: 0.1;
+    }
+    100% {
+      transform: translateX(-5%);
+      opacity: 1;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /*==========================ABOUT MAIN PAGE END============================ */
+  
+  /*==========================ABOUT PAGE END============================ */
+  
+  
+  
+  
