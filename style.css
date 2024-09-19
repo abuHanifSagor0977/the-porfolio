@@ -12,7 +12,9 @@ body,
 html {
   font-family: "Rubik", sans-serif;
   scroll-behavior: smooth;
-  overflow: auto;
+  overflow-x: hidden;
+  width: 100%;
+  height: auto;
 }
 a{
   text-decoration: none;
@@ -21,8 +23,8 @@ a{
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: auto;
+  
   @media (min-width: 576px) {
     max-width: 540px;
   }
@@ -181,7 +183,7 @@ h6 {
 .banner {
   width: 100%;
   height: 100vh;
-  background-image: url("assest/images/HeroBanner/bg.jpg");
+  background-image: url("assets/images/HeroBanner/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -200,7 +202,7 @@ h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("assest/images/HeroBanner/rays.webp");
+    background-image: url("assets/images/HeroBanner/rays.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -216,7 +218,7 @@ h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("assest/images/HeroBanner/dust.webp");
+    background-image: url("assets/images/HeroBanner/dust.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -346,7 +348,7 @@ h6 {
 .button button {
   margin-top: 20px;
   padding: 15px 29px;
-  background-image: url("assest/images/pattern.jpg");
+  background-image: url("assets/images/pattern.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -380,7 +382,7 @@ h6 {
 }
 .images_box3 {
   min-width: 100% !important;
-  background-image: url("assest/images/HeroBanner/jax.webp") !important;
+  background-image: url("assets/images/HeroBanner/jax.webp") !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
@@ -399,7 +401,7 @@ h6 {
   z-index: 5;
   width: 100%;
   height: 100%;
-  background-image: url("assest/images/HeroBanner/luna.webp");
+  background-image: url("assets/images/HeroBanner/luna.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -412,7 +414,7 @@ h6 {
   z-index: 5;
   width: 100%;
   height: 100%;
-  background-image: url("assest/images/HeroBanner/manny.webp");
+  background-image: url("assets/images/HeroBanner/manny.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -470,7 +472,7 @@ h6 {
   z-index: 5;
   width: 101.5%;
   height: 100%;
-  background-image: url("assest/images/foreground-back.webp");
+  background-image: url("assets/images/foreground-back.webp");
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0.7;
@@ -509,7 +511,7 @@ h6 {
   width: 101.5%;
   height: 100%;
   pointer-events: none;
-  background-image: url("assest/images/foreground-front.webp");
+  background-image: url("assets/images/foreground-front.webp");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1010,7 +1012,7 @@ h6 {
   width: 100%;
   position: relative;
   height: 90vh;
-  background-image: url("assest/images/pattern.jpg");
+  background-image: url("assets/images/pattern.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -1207,7 +1209,7 @@ h6 {
 .details{
   width: 100%;
   height: 100%;
-  background-image: url(assest/images/glitter.png), linear-gradient(180deg, #15204a 31.25%, #180824 101.23%);
+  background-image: url(assets/images/glitter.png), linear-gradient(180deg, #15204a 31.25%, #180824 101.23%);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     z-index: 0;
@@ -1246,7 +1248,7 @@ transform: rotate(30deg);
   margin-bottom: 130px;
   & h4{
     align-items: center;
-    background: url(assest/images/pattern.jpg) no-repeat;
+    background: url(assets/images/pattern.jpg) no-repeat;
     background-size: cover;
     background-position: 50% 50%;
     padding: 0 10px;
@@ -1360,7 +1362,7 @@ background: radial-gradient(circle at var(--x) var(--y), transparent 10%,rgba(0,
 
 .game{
   width: 100%;
-  background-image: url(assest/images/bg_wmg_brawlstars.8f6001aa.webp);
+  background-image: url(assets/images/bg_wmg_brawlstars.8f6001aa.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1524,9 +1526,10 @@ footer{
 }
 
 .fti{
-  width: 200px !important;
-  filter: grayscale(1);
+  width: 100px !important;
+  filter: brightness(2) ;
   cursor: pointer;
+  display: inline-block;
 }
 .fit img{
   width: 100% !important;
@@ -1534,7 +1537,7 @@ footer{
 }
 @media screen and (min-width: 500px) {
   .fti{
-    width: 200px !important;
+    width: 100px !important;
     & img{
       width: 100% !important;
     }
@@ -1557,7 +1560,7 @@ footer{
 }
 /*================ FOOTER END================== */
 #preloader{
-  background: rgb(4, 35, 102) url(assest/load.gif) no-repeat center center;
+  background: rgb(4, 35, 102) url(assets/load.gif) no-repeat center center;
   width: 100%;
   height: 100vh;
   position: fixed;
