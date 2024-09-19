@@ -23,7 +23,7 @@ a{
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
-  margin: auto;
+  margin: 0 auto;
   
   @media (min-width: 576px) {
     max-width: 540px;
@@ -238,18 +238,18 @@ h6 {
   background: rgba(0, 0, 0, 0.639);
   z-index: 2;
 }
+
 .hero_wrapper {
   position: relative;
   z-index: 6;
   color: var(--mainText-color);
   width: 100%;
   padding: 0 15px;
-
+  
   @media (min-width: 320px) {
     text-align: center;
     & h1 {
-      font-size: 40px !important;
-      width: 400px;
+      font-size: 35px !important;
       margin: auto !important;
       text-align: center !important;
     }
@@ -463,6 +463,10 @@ h6 {
   padding: 200px 0;
   position: relative;
   z-index: 5;
+  @media screen and (max-width: 500px) {
+    padding: 100px 0;
+    
+  }
 }
 .foreground_back {
   position: absolute;
@@ -598,11 +602,15 @@ h6 {
     0 86%,
     0 13%
   );
+  @media screen and (min-width: 320px) {
+    padding: 20px 30px !important;
+  }
 }
 .box h6 {
   font-size: 35px;
   font-weight: 800;
 }
+
 @media (max-width: 768px) {
   .boxs .box h6 {
     font-size: 25px;
@@ -652,8 +660,14 @@ h6 {
   & .foreground_end img {
     width: 100%;
   }
-  @media (min-width: 560px) {
-    bottom: -40px !important;
+  @media (min-width: 320px) {
+    bottom: -22px !important;
+  }
+  @media screen and (min-width: 400px) {
+    bottom: -25px !important;
+  }
+  @media (min-width: 500px) {
+    bottom: -35px !important;
   }
   & .foreground_end img {
     width: 100%;
@@ -830,6 +844,11 @@ h6 {
 #founders {
   padding-top: 0;
   margin-top: 0;
+}
+@media (min-width: 320px) {
+  #founders {
+    margin-top: -180%;
+  }
 }
 @media (min-width: 500px) {
   #founders {
@@ -1021,7 +1040,9 @@ h6 {
   background-attachment: fixed;
   justify-content: center;
   align-items: center;
+
 }
+
 .ft_overlay{
   position: absolute;
   top: 0;
@@ -1093,6 +1114,16 @@ h6 {
       flex-grow: 1;
       padding: 10px 15px;
       outline: none;
+      position: relative;
+      z-index: 1;
+      @media screen and (min-width: 320px) {
+        font-size: 15px;
+        padding: 5px 0px;
+      }
+      @media screen and (min-width: 768px) {
+         padding: 10px 15px;
+          font-size: 18px;
+      }
     }
 
     .email-input::placeholder {
@@ -1103,6 +1134,8 @@ h6 {
       font-size: 24px;
       color: #c18bc7;
       transition: all 0.5s ease;
+      position: absolute;
+      right: 15px;
     }
     /* Hover Effects */
     .email-input-container:hover .x {
@@ -1133,6 +1166,14 @@ h6 {
 }
 .inval button{
     margin-top: 38px;
+    @media screen and (min-width: 320px) {
+      padding: 10px 15px;
+      font-size: 15px;
+    }
+    @media screen and (min-width: 768px) {
+      padding: 15px 29px;
+      font-size: 18px;
+    }
 }
 .nitan{
   width: 500px;
@@ -1145,9 +1186,16 @@ h6 {
 }
 .container{
   & .nitan{
+    @media screen and (min-width: 320px) {
+      width: 50%;
+      bottom: -1%;
+      right: -8%;
+    }
+  }
+  & .nitan{
     @media screen and (min-width: 500px) {
       width: 40%;
-      bottom: -2%;
+      bottom: -1.5%;
       right: -8%;
     }
   }
@@ -1187,7 +1235,7 @@ h6 {
     width: 100% !important;
   }
 ;
-  margin-bottom: -5px;
+  margin-bottom: -7px;
 }
 
 /* ================== JOIN US END================== */
@@ -1311,12 +1359,19 @@ span{
 
 .texts{
   width: 100%;
-  height:80vh;
+  height:100vh;
   position: relative;
+  @media screen and (min-width: 320px) {
+  height: 30vh;
+  }
+  @media screen and (min-width: 500px) {
+  height: 60vh;
+  }
 }
 .texts video{
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .dev{
   position: absolute;
@@ -1335,7 +1390,9 @@ span{
     font-weight: 900;
     text-transform: uppercase;
     cursor: default;
+
 }
+
 }
 .light{
 position: absolute;
@@ -1392,6 +1449,13 @@ background: radial-gradient(circle at var(--x) var(--y), transparent 10%,rgba(0,
 .gameWrapper{
   padding: 100px 0;
   position: relative;
+  @media screen and (min-width: 320px) {
+    padding-top: 0;
+    padding-bottom: 100px;
+  }
+  @media screen and (min-width: 500px) {
+    padding: 100px 0;
+  }
 }
 .gameRight{
   position: absolute;
@@ -1403,6 +1467,13 @@ background: radial-gradient(circle at var(--x) var(--y), transparent 10%,rgba(0,
   justify-content: flex-end;
   & img{
     width: 100%;
+  }
+}
+.gameRight{
+  @media screen and (min-width: 320px) {
+    width: 40%;
+      right: 3%;
+    
   }
 }
 .gameRight{
@@ -1434,14 +1505,14 @@ background: radial-gradient(circle at var(--x) var(--y), transparent 10%,rgba(0,
 }
 .gameRight{
   @media screen and (min-width: 1400px) {
-    width: 60%;
-      right: -30%;
+    width: 40%;
+      right: -5%;
   }
 }
 .gameRight{
   @media screen and (min-width: 1600px) {
-    width: 50%;
-      right: -20%;
+    width: 40%;
+      right: -15%;
   }
 }
 
@@ -1454,7 +1525,7 @@ background: radial-gradient(circle at var(--x) var(--y), transparent 10%,rgba(0,
     margin-bottom: 20px;
     color: white;
     @media screen and (min-width: 900px) {
-    font-size: 80px;
+    font-size: 50px;
     margin-left: 3%;
     }
   }
