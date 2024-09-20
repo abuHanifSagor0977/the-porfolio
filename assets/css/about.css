@@ -106,11 +106,25 @@ h6 {
     justify-content: center;
     align-items: center;
     position: relative;
-    overflow: hidden;
+    
     z-index: 5;
     background-attachment: fixed;
     pointer-events: none;
-    
+    @media screen and (min-width: 320px) {
+      height: 50vh;
+    }
+    @media screen and (min-width: 500px) {
+      height: 60vh;
+    }
+    @media screen and (min-width: 768px) {
+      height: 60vh;
+    }
+    @media screen and (min-width: 992px) {
+      height: 70vh;
+    }
+    @media screen and (min-width: 1200px) {
+      height: 100vh;
+    }
   }
   .tbar{
     width: 100%;
@@ -171,6 +185,12 @@ h6 {
   -webkit-text-fill-color: transparent;
   }
   
+  @media screen and (min-width: 320px) {
+    .topbar  .log_boxs h2 {
+      font-size: 2rem;
+    }
+    }
+  
   @media screen and (min-width: 500px) {
     .topbar  .log_boxs h2 {
       font-size: 3.5rem;
@@ -194,6 +214,12 @@ h6 {
     font-weight: 600;
     text-align: center;
     color: #ffee00;
+    @media screen and (min-width: 320px) {
+      font-size: 1.2rem;
+    }
+    @media screen and (min-width: 500px) {
+      font-size: 1.6rem;
+    }
   }
   
   .log_boxs {
@@ -229,7 +255,6 @@ h6 {
   }.log_boxs{
     position: absolute;
     top: 0;
-    font-size: 150px;
     z-index: 10;
     margin: auto;
   }
@@ -249,6 +274,12 @@ h6 {
     position: relative;
     border-radius: 20px;
     overflow: hidden;
+    margin: auto;
+    @media screen and (min-width: 320px) {
+      max-width: 200px;
+      min-height: 350px;
+    }
+  
 }
 
 .about_img::before {
@@ -324,6 +355,12 @@ h6 {
       font-weight: 800;
       margin: 20px 0;
       text-transform: uppercase;
+      @media screen and (min-width:320px) {
+        font-size: 2rem;
+      }
+      @media screen and (min-width:500px) {
+        font-size: 3rem;
+      }
     }
     & p{
       color: #ffffffd0;
@@ -331,9 +368,24 @@ h6 {
       font-weight: 400;
       line-height: 1.5;
       letter-spacing: 1px;
-      
       direction: rtl;
+      @media screen and (min-width:320px) {
+        font-size: 1.1rem;
+        text-align: left;
+      }
+      @media screen and (min-width:500px) {
+        font-size: 1.3rem;
+      }
       
+    }
+  }
+  #intro span{
+     
+     @media  screen and (min-width:320px) {
+       font-size: 1.5rem !important;
+     }
+     @media  screen and (min-width:500) {
+      font-size: 2rem !important;
     }
   }
   #bio{
