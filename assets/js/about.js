@@ -57,4 +57,94 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 30); 
 });
 
+// progress bar
+const skills = [
+  { id: 'progressHTML', percentage: 88 },
+  { id: 'progressCSS', percentage: 77 },
+  { id: 'progressJS', percentage: 58 },
+  { id: 'progressBootstrap', percentage: 68 },
+  { id: 'progressPHP', percentage: 32 },
+  { id: 'progressLaravel', percentage: 5 }
+];
 
+// Function to start the animation for a specific skill
+function startAnimation(skill) {
+  const progressElement = document.getElementById(skill.id);
+  const circleElement = document.getElementById(`circle${skill.id.replace('progress', '')}`);
+  const radius = 45; // Circle radius (as specified in HTML)
+  const totalLength = 2 * Math.PI * radius; // Calculate circumference
+  const targetOffset = totalLength * (1 - (skill.percentage / 100)); // Calculate target offset
+
+  // Check if elements exist
+  if (!progressElement || !circleElement) return;
+
+  // Set the stroke-dasharray to the total length
+  circleElement.style.strokeDasharray = totalLength;
+
+  // Timing configuration
+  const duration = 2000; // Total duration for the animation in milliseconds
+  const intervalTime = (duration / skill.percentage) || 100; // Interval based on percentage
+  let counter = 0; // Start from 0
+
+  // Animate percentage from 0 to target percentage
+  const updatePercentage = setInterval(() => {
+    if (counter >= skill.percentage) {
+      clearInterval(updatePercentage);
+      // Add final value with specified styles
+      progressElement.innerHTML = `<span class="number" style="color: var(--team-color); font-size: 20px; font-weight: 600;">${skill.percentage}</span><span class="percentage-symbol" style="color: #ffc107; font-size: 30px; font-weight: 400;">%</span>`;
+    } else {
+      counter++;
+      // Update number value with specified styles
+      progressElement.innerHTML = `<span class="number" style="color: var(--team-color); font-size: 20px; font-weight: 600;">${counter}</span><span class="percentage-symbol" style="color: #ffc107; font-size: 30px; font-weight: 400;">%</span>`;
+    }
+  }, intervalTime); // Use calculated interval time
+
+  // Apply the target stroke-dashoffset
+  circleElement.style.strokeDashoffset = totalLength; // Start hidden
+  setTimeout(() => {
+    circleElement.style.strokeDashoffset = targetOffset; // Animate to target offset
+  }, 50); // Delay to ensure styles are applied
+}
+
+// Function to start text animations when the skill section is visible
+function startTextAnimation() {
+  const skillTitles = document.querySelectorAll('.skills h5');
+  const skillDescriptions = document.querySelectorAll('.skills p');
+
+  skillTitles.forEach(title => {
+    title.style.animation = 'drop 3s forwards';
+  });
+
+  skillDescriptions.forEach(description => {
+    description.style.animation = 'up 1.5s forwards';
+  });
+}
+
+// Function to handle the intersection for the skill section
+function handleIntersection(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const skillId = entry.target.getAttribute('data-skill-id');
+      const skill = skills.find(skill => skill.id === skillId);
+      if (skill) {
+        startAnimation(skill); // Start skill bar animation
+        startTextAnimation(); // Start text animations
+        observer.unobserve(entry.target); // Stop observing once the animation starts
+      }
+    }
+  });
+}
+
+// Create an IntersectionObserver instance
+const observer = new IntersectionObserver(handleIntersection, {
+  root: null, // Use the viewport as the root
+  threshold: 0.2 // Trigger when 20% of the element is visible
+});
+
+// Observe each skill section
+skills.forEach(skill => {
+  const skillSection = document.querySelector(`[data-skill-id="${skill.id}"]`);
+  if (skillSection) {
+    observer.observe(skillSection); // Start observing each section
+  }
+});

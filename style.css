@@ -1609,13 +1609,22 @@ footer{
 }
 
 .fti{
-  width: 100px !important;
+  width: 80px !important;
   filter: brightness(2) ;
   cursor: pointer;
   display: inline-block;
 }
 .fit img{
   width: 100% !important;
+  
+}
+@media  screen and (min-width: 320px) {
+  .fti{
+    width: 80px !important;
+    & img{
+      width: 100% !important;
+    }
+  }
   
 }
 @media screen and (min-width: 500px) {

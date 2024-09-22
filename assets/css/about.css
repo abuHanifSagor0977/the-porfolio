@@ -431,9 +431,207 @@ h6 {
     
 }
   
+  /*==========================SKILL BAR 
+  start============================ */
+  .skills {
+    width: 100%;
+    height: 100%;
+    background: #f9f9f9;
+  }
+  .skill {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+    overflow: hidden;
+  }
   
-  /*==========================ABOUT MAIN PAGE END============================ */
+  .skill h5, 
+  .skill p {
+    text-orientation: mixed;
+  }
   
+  .skill h5 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    -webkit-text-fill-color: transparent;
+    stroke: 1px #ff9100;
+    -webkit-text-stroke: 1px #ff8000;
+    animation: drop 3s ease forwards;
+    animation-delay: 0.5s; /* Add delay before the animation starts */
+  }
+  
+  .skill p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    animation: up 5s ease forwards;
+    animation-delay: 1s; /* Add delay before the animation starts */
+  }
+  
+  @keyframes drop {
+    0% {
+      transform: translateY(150px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes up {
+    0% {
+      transform: translateY(-150px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  .progress_wrap .card {
+    border: none;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1),
+    -10px -10px 10px rgb(255, 255, 255);
+    backdrop-filter: blur(7.8px);
+    -webkit-backdrop-filter: blur(7.8px);
+    transition: hover 0.3s;
+    
+  }
+
+  .progress_wrap .card .card-body{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 30px;
+    height: 200px;
+    border: none;
+    justify-content: space-between;
+  }
+  
+  .skill_bar {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    & svg{
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  
+  .outer {
+    height: 120px;
+    width: 120px;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  }
+  
+  .inner {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+                inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7), 
+                -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+                0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+                0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+  }
+  
+  circle {
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 15px;
+    transition: stroke-dashoffset 3s ease; /* Smooth transition */
+}
+.animated_banner{
+  padding: 0;
+}
+.animated_banner_box{
+  width: 100%;
+  height: 500px;
+  object-fit: contain; 
+   position: relative;
+  @media screen and (max-width: 1080px) {
+    display: none;
+  }
+
+}
+.animated_banner_box iframe{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  scroll-snap-align: start;
+
+}
+.animated_banner_text{
+  width: 200px;
+  padding: 7px 10px 0px 10px;
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(14.9px);
+-webkit-backdrop-filter: blur(14.9px);
+  
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 15px;
+  right: 10px;
+  & h1{
+    font-size: 22px;
+    font-weight: 900;
+    -webkit-text-fill-color: transparent;
+    stroke: 1px #fff;
+    -webkit-text-stroke: 1px #fff;
+  }
+}
+/*========================== SKILL BAR END============================ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   /*==========================ABOUT PAGE END============================ */
   
   
