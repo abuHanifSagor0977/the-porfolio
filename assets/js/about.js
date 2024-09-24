@@ -91,11 +91,11 @@ function startAnimation(skill) {
     if (counter >= skill.percentage) {
       clearInterval(updatePercentage);
       // Add final value with specified styles
-      progressElement.innerHTML = `<span class="number" style="color: var(--team-color); font-size: 20px; font-weight: 600;">${skill.percentage}</span><span class="percentage-symbol" style="color: #ffc107; font-size: 30px; font-weight: 400;">%</span>`;
+      progressElement.innerHTML = `<span class="number" style="color: var(--team-color); font-size: 18px; font-weight: 600;">${skill.percentage}</span><span class="percentage-symbol" style="color: #ffc107; font-size: 25px; font-weight: 400;">%</span>`;
     } else {
       counter++;
       // Update number value with specified styles
-      progressElement.innerHTML = `<span class="number" style="color: var(--team-color); font-size: 20px; font-weight: 600;">${counter}</span><span class="percentage-symbol" style="color: #ffc107; font-size: 30px; font-weight: 400;">%</span>`;
+      progressElement.innerHTML = `<span class="number" style="color: var(--team-color); font-size: 18px; font-weight: 600;">${counter}</span><span class="percentage-symbol" style="color: #ffc107; font-size: 25px; font-weight: 400;">%</span>`;
     }
   }, intervalTime); // Use calculated interval time
 
@@ -148,3 +148,57 @@ skills.forEach(skill => {
     observer.observe(skillSection); // Start observing each section
   }
 });
+
+let items = document.querySelectorAll('.slider .list .item');
+let next = document.getElementById('next');
+let prev = document.getElementById('prev');
+let thumbnails = document.querySelectorAll('.thumbnail .item');
+
+// config param
+let countItem = items.length;
+let itemActive = 0;
+// event next click
+next.onclick = function(){
+    itemActive = itemActive + 1;
+    if(itemActive >= countItem){
+        itemActive = 0;
+    }
+    showSlider();
+}
+//event prev click
+prev.onclick = function(){
+    itemActive = itemActive - 1;
+    if(itemActive < 0){
+        itemActive = countItem - 1;
+    }
+    showSlider();
+}
+// auto run slider
+let refreshInterval = setInterval(() => {
+    next.click();
+}, 5000)
+function showSlider(){
+    // remove item active old
+    let itemActiveOld = document.querySelector('.slider .list .item.active');
+    let thumbnailActiveOld = document.querySelector('.thumbnail .item.active');
+    itemActiveOld.classList.remove('active');
+    thumbnailActiveOld.classList.remove('active');
+
+    // active new item
+    items[itemActive].classList.add('active');
+    thumbnails[itemActive].classList.add('active');
+
+    // clear auto time run slider
+    clearInterval(refreshInterval);
+    refreshInterval = setInterval(() => {
+        next.click();
+    }, 5000)
+}
+
+// click thumbnail
+thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener('click', () => {
+        itemActive = index;
+        showSlider();
+    })
+})
