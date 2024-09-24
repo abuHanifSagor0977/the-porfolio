@@ -623,6 +623,8 @@ backdrop-filter: blur(14.9px);
   width: 100% !important;
   height: 100%;
   object-fit: cover;
+  filter: blur(1px);
+  filter: brightness(0.5);
 }
 .slider .list .item::after{
   content: '';
@@ -631,8 +633,9 @@ backdrop-filter: blur(14.9px);
   position: absolute;
   left: 0;
   bottom: 0;
+
   background-image: linear-gradient(
-      to top, #000 19%, transparent
+      to top, rgba(0, 0, 0, 0.561) 19%, transparent
   );
 }
 .slider .list .item .content{
@@ -732,9 +735,10 @@ backdrop-filter: blur(14.9px);
 .thumbnail .item{
   width: 150px;
   height: 220px;
-  filter: brightness(.5);
+  filter: brightness(.8);
   transition: .5s;
   flex-shrink: 0;
+  cursor: pointer;
 }
 
 .thumbnail .item img{
@@ -744,19 +748,18 @@ backdrop-filter: blur(14.9px);
   border-radius: 10px;
 }
 .thumbnail .item.active{
-  filter: brightness(1.2);
+  filter: brightness(.4);
   margin-top: -10px;
 }
 .thumbnail .item .content{
   position: absolute;
-  inset: auto 10px 10px 10px;
- 
+  inset: auto 10px 60px 10px;
+  justify-content: center;
+  display: flex;
+  color: #e033a3;
+  font-weight: 600;
+  align-items: center;
   z-index: 10;
-  & p{
-    text-align: center;
-    color: #ffae00;
-    text-transform: uppercase;
-  }
 }
 @media screen and (max-width: 678px) {
   .thumbnail{

@@ -138,7 +138,7 @@ const button = document.querySelector('.ball-btn');
 button.addEventListener('click', () => {
   button.classList.add('clicked');
   setTimeout(() => {
-    window.open('https://example.com', '_blank');
+    window.open('assets/pages/game.html', '_blank');
   }, 700);
 });
 
