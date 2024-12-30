@@ -268,7 +268,7 @@ h6 {
   .about_img {
     max-width: 370px;
     min-height: 550px;
-    background: url("../images/HOLOLIVE.jpeg") no-repeat;
+    background: url("../images/others/profile.jpg") no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -289,10 +289,13 @@ h6 {
     position: absolute;
     top: 0;
     left: 0;
-    background: url("../images/others/25b397807a8e973faf9e96f886fa8d4d.jpg");
+    background: url("../images/others/bgs.png"); 
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     mix-blend-mode: screen;
+    opacity: 0.5;
+    transform: rotate(180deg);
 }
 
 
